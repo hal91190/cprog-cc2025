@@ -27,19 +27,23 @@ public class Voiture extends Vehicule {
         return "Vroom...";
     }
 
-    // Cette méthode renvoie un texte qui, en cas de spécialisation de la classe, n’est plus adéquat pour les classes filles.
+    // Cette méthode renvoie un texte qui, en cas de spécialisation de la classe,
+    // n’est plus adéquat pour les classes filles.
     @Override
     public String typeVehicule() {
         return "Voiture (" + nbPortes + " portes)";
     }
 
-    // Vous pouvez redéfinir la méthode getInfo() si vous souhaitez lui donner un comportement particulier.
-    // Il n’est pas obligatoire de la redéfinir : la méthode définie dans la classe mère peut s’appliquer de manière générique à toutes les instances des classes filles, puisqu’elle agit sur les deux attributs hérités de la classe mère.
+    // Vous pouvez redéfinir la méthode getInfo()
+    // si vous souhaitez lui donner un comportement particulier.
+    // Il n’est pas obligatoire de la redéfinir :
+    // la méthode définie dans la classe mère peut s’appliquer
+    // de manière générique à toutes les instances des classes filles,
+    // puisqu’elle agit sur les deux attributs hérités de la classe mère.
     @Override
     public String getInfo() {
         // On réutilise la méthode getInfo() de la superclasse
         // en utilisant le mot-clé super
         return super.getInfo() + ", " + nbPortes + " portes";
     }
-
-
+}

@@ -34,8 +34,8 @@
   * Le code compile car le mécanisme d'héritage permet d'affecter une référence sur une instance d'une sous-classe à une variable du type de la super-classe et rend disponible les méthodes de la super-classe.
   * Cependant, la méthode `typeVehicule()` n'est pas redéfinie dans la classe `Voiture`, donc l'appel de cette méthode utilise la version héritée de `Vehicule`, qui retourne la chaîne générique "Véhicule générique".
   * Pour obtenir le résultat attendu, il faudrait redéfinir la méthode `typeVehicule()` dans la classe `Voiture` pour qu'elle retourne une description spécifique de la voiture, incluant le nombre de portes.
-  * Le développeur a pu recopier la méthode de la classe mére et ne l'a pas encore modifié !
-  * La cause ne peux être du à @Override qui est une annotation falcultative mais recommandée. Son absence n'empêche pas le polymorphisme. 
+  * Le développeur a pu recopier la méthode de la classe mère et ne l'a pas encore modifiée !
+  * La cause ne peut être du à `@Override` qui est une annotation facultative mais recommandée. Son absence n'empêche pas le polymorphisme.
 * **Question 7**: Quel énoncé concernant Maven est correct ?
   * Maven utilise par défaut le fichier pom.json pour définir les dépendances et la configuration du projet.
     * NON Maven utilise le fichier pom.xml (au format XML et non pas JSON)

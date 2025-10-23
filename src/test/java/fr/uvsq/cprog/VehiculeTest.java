@@ -1,34 +1,30 @@
 package fr.uvsq.cprog;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-/**
- * Unit test for simple App.
- */
 public class VehiculeTest {
-    @Test
-    public void testMotoYamaha() {
-        Moto moto = new Moto("Yamaha", 2018, false);
-        assertEquals("Broom...", moto.demarrer());
-        assertEquals("Yamaha (2018) Moto solo", moto.getInfo());
-    }
-}
+  private Moto moto;
 
+  @BeforeEach
+  public void setUp() {
+      moto = new Moto("Yamaha", 2018, false);
+  }
 
-/*
-// SI vous utilisez garage 
+  @Test
+  public void testMotoYamaha() {
+      assertEquals("Broom...", moto.demarrer());
+      assertEquals("Yamaha (2018) Moto solo", moto.getInfo());
+  }
 
-public class VehiculeTest {
+  // En utilisant Garage
   @Test
   public void testPolymorphismeMoto() {
-    Moto m = new Moto("Yamaha", 2018, false);
-    String result = new Garage().faireDemarrer(m);
-    assertTrue(result.contains("Broom! La moto Yamaha démarre."));
+    String result = new Garage().faireDemarrer(moto);
+    assertTrue(result.contains("Broom"));
     assertTrue(result.contains("Moto solo"));
   }
 }
-
- */
-
