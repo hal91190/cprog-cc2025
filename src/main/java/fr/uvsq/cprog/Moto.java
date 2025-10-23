@@ -13,6 +13,12 @@ public class Moto extends Vehicule {
         return "Broom...";
     }
 
+    // Soit vous redéfinissez typeVehicule() ou getInfo(). Voir les commentaires dans la classe Voiture.
+    @Override
+    public String typeVehicule() {
+        return sidecar ? "Moto avec sidecar" : "Moto solo";
+    }
+
     @Override
     public String getInfo() {
         return super.getInfo() + (sidecar ? " sideCar" : " Moto solo");
